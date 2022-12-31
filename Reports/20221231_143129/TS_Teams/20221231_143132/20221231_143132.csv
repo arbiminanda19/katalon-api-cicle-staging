@@ -1,0 +1,22 @@
+Suite/Test/Step Name,Browser,Description,Tag,Start time,End time,Duration,Status
+TS_Teams,,,,2022-12-31 14:32:47,2022-12-31 14:33:01,13.895s,PASSED
+,,,,,,,
+Test Cases/companies/Create Company,,,,2022-12-31 14:32:47,2022-12-31 14:32:57,9.679s,PASSED
+jsonSlurper = new groovy.json.JsonSlurper(),,,,2022-12-31 14:32:48,2022-12-31 14:32:48,0.009s,PASSED
+"response = sendRequest(findTestObject(""companies/Create Company""))",,,,2022-12-31 14:32:48,2022-12-31 14:32:57,9.074s,PASSED
+"verifyResponseStatusCode(response, 200)",,,,2022-12-31 14:32:57,2022-12-31 14:32:57,0.055s,PASSED
+"verifyElementPropertyValue(response, ""message"", ""Successfully create company user"")",,,,2022-12-31 14:32:57,2022-12-31 14:32:57,0.102s,PASSED
+jsonResponse = jsonSlurper.parseText(response.getResponseBodyContent()),,,,2022-12-31 14:32:57,2022-12-31 14:32:57,0.019s,PASSED
+companyId = _id,,,,2022-12-31 14:32:57,2022-12-31 14:32:57,0.000s,PASSED
+,,,,,,,
+Test Cases/teams/Create Team,,,,2022-12-31 14:32:57,2022-12-31 14:32:58,0.887s,PASSED
+jsonSlurper = new groovy.json.JsonSlurper(),,,,2022-12-31 14:32:57,2022-12-31 14:32:57,0.002s,PASSED
+"response = sendRequest(findTestObject(""teams/Create Team""))",,,,2022-12-31 14:32:57,2022-12-31 14:32:58,0.547s,PASSED
+"verifyResponseStatusCode(response, 200)",,,,2022-12-31 14:32:58,2022-12-31 14:32:58,0.015s,PASSED
+"verifyElementPropertyValue(response, ""newTeam.name"", teamName)",,,,2022-12-31 14:32:58,2022-12-31 14:32:58,0.043s,PASSED
+jsonResponse = jsonSlurper.parseText(response.getResponseBodyContent()),,,,2022-12-31 14:32:58,2022-12-31 14:32:58,0.001s,PASSED
+teamId = _id,,,,2022-12-31 14:32:58,2022-12-31 14:32:58,0.000s,PASSED
+,,,,,,,
+Test Cases/companies/Delete Company,,,,2022-12-31 14:32:58,2022-12-31 14:33:01,2.870s,PASSED
+"response = sendRequest(findTestObject(""companies/Delete Company""))",,,,2022-12-31 14:32:58,2022-12-31 14:33:01,2.681s,PASSED
+"verifyResponseStatusCode(response, 200)",,,,2022-12-31 14:33:01,2022-12-31 14:33:01,0.015s,PASSED
