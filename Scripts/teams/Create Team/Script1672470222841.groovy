@@ -28,4 +28,5 @@ WS.verifyElementPropertyValue(response, 'newTeam.name', GlobalVariable.teamName)
 
 def jsonResponse = jsonSlurper.parseText(response.getResponseBodyContent())
 
-GlobalVariable.teamId = jsonResponse.newTeam._id
+CustomKeywords.'helper.GlobalVariableUpdater.updatePermanentlyForCurrent'('teamId', jsonResponse.newTeam._id)
+CustomKeywords.'helper.GlobalVariableUpdater.updatePermanentlyForCurrent'('boardId', jsonResponse.newTeam.boards[0])

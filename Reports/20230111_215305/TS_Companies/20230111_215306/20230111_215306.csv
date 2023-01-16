@@ -1,0 +1,29 @@
+Suite/Test/Step Name,Browser,Description,Tag,Start time,End time,Duration,Status
+TS_Companies,,,,2023-01-11 21:53:32,2023-01-11 21:54:23,50.508s,PASSED
+,,,,,,,
+Test Cases/companies/Create Company,,,,2023-01-11 21:53:33,2023-01-11 21:53:45,12.094s,PASSED
+jsonSlurper = new groovy.json.JsonSlurper(),,,,2023-01-11 21:53:33,2023-01-11 21:53:33,0.009s,PASSED
+"response = sendRequest(findTestObject(""companies/Create Company""))",,,,2023-01-11 21:53:33,2023-01-11 21:53:44,11.181s,PASSED
+"verifyResponseStatusCode(response, 200)",,,,2023-01-11 21:53:44,2023-01-11 21:53:44,0.047s,PASSED
+"verifyElementPropertyValue(response, ""message"", ""Successfully create company user"")",,,,2023-01-11 21:53:44,2023-01-11 21:53:45,0.101s,PASSED
+jsonResponse = jsonSlurper.parseText(response.getResponseBodyContent()),,,,2023-01-11 21:53:45,2023-01-11 21:53:45,0.012s,PASSED
+"helper.GlobalVariableUpdater.updatePermanentlyForCurrent(""companyId"", _id)",,,,2023-01-11 21:53:45,2023-01-11 21:53:45,0.298s,PASSED
+,,,,,,,
+Test Cases/companies/Get All Companies,,,,2023-01-11 21:53:45,2023-01-11 21:54:01,16.172s,PASSED
+"response = sendRequest(findTestObject(""companies/Get All Companies""))",,,,2023-01-11 21:53:45,2023-01-11 21:54:01,15.750s,PASSED
+"verifyResponseStatusCode(response, 200)",,,,2023-01-11 21:54:01,2023-01-11 21:54:01,0.020s,PASSED
+jsonSlurper = new groovy.json.JsonSlurper(),,,,2023-01-11 21:54:01,2023-01-11 21:54:01,0.001s,PASSED
+jsonResponse = jsonSlurper.parseText(response.getResponseBodyContent()),,,,2023-01-11 21:54:01,2023-01-11 21:54:01,0.027s,PASSED
+foundCompany = false,,,,2023-01-11 21:54:01,2023-01-11 21:54:01,0.000s,PASSED
+i = 0,,,,2023-01-11 21:54:01,2023-01-11 21:54:01,0.001s,PASSED
+while (!(foundCompany)),,,,2023-01-11 21:54:01,2023-01-11 21:54:01,0.049s,PASSED
+,,,,,,,
+Test Cases/companies/Update Company,,,,2023-01-11 21:54:01,2023-01-11 21:54:14,13.478s,PASSED
+"companyName = companyName + "" Edited""",,,,2023-01-11 21:54:01,2023-01-11 21:54:01,0.002s,PASSED
+"response = sendRequest(findTestObject(""companies/Update Company""))",,,,2023-01-11 21:54:01,2023-01-11 21:54:14,13.085s,PASSED
+"verifyResponseStatusCode(response, 200)",,,,2023-01-11 21:54:14,2023-01-11 21:54:14,0.021s,PASSED
+"verifyElementPropertyValue(response, ""company.name"", companyName)",,,,2023-01-11 21:54:14,2023-01-11 21:54:14,0.139s,PASSED
+,,,,,,,
+Test Cases/companies/Delete Company,,,,2023-01-11 21:54:15,2023-01-11 21:54:23,8.288s,PASSED
+"response = sendRequest(findTestObject(""companies/Delete Company""))",,,,2023-01-11 21:54:15,2023-01-11 21:54:23,7.985s,PASSED
+"verifyResponseStatusCode(response, 200)",,,,2023-01-11 21:54:23,2023-01-11 21:54:23,0.007s,PASSED

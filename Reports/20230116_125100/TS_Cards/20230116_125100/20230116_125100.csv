@@ -1,0 +1,46 @@
+Suite/Test/Step Name,Browser,Description,Tag,Start time,End time,Duration,Status
+TS_Cards,,,,2023-01-16 12:51:12,2023-01-16 12:51:30,18.171s,FAILED
+,,,,,,,
+Test Cases/companies/Create Company,,,,2023-01-16 12:51:12,2023-01-16 12:51:22,10.126s,PASSED
+jsonSlurper = new groovy.json.JsonSlurper(),,,,2023-01-16 12:51:13,2023-01-16 12:51:13,0.010s,PASSED
+"response = sendRequest(findTestObject(""companies/Create Company""))",,,,2023-01-16 12:51:13,2023-01-16 12:51:22,9.252s,PASSED
+"verifyResponseStatusCode(response, 200)",,,,2023-01-16 12:51:22,2023-01-16 12:51:22,0.049s,PASSED
+"verifyElementPropertyValue(response, ""message"", ""Successfully create company user"")",,,,2023-01-16 12:51:22,2023-01-16 12:51:22,0.094s,PASSED
+jsonResponse = jsonSlurper.parseText(response.getResponseBodyContent()),,,,2023-01-16 12:51:22,2023-01-16 12:51:22,0.014s,PASSED
+"helper.GlobalVariableUpdater.updatePermanentlyForCurrent(""companyId"", _id)",,,,2023-01-16 12:51:22,2023-01-16 12:51:22,0.239s,PASSED
+,,,,,,,
+Test Cases/teams/Create Team,,,,2023-01-16 12:51:22,2023-01-16 12:51:23,0.870s,PASSED
+jsonSlurper = new groovy.json.JsonSlurper(),,,,2023-01-16 12:51:23,2023-01-16 12:51:23,0.002s,PASSED
+"response = sendRequest(findTestObject(""teams/Create Team""))",,,,2023-01-16 12:51:23,2023-01-16 12:51:23,0.504s,PASSED
+"verifyResponseStatusCode(response, 200)",,,,2023-01-16 12:51:23,2023-01-16 12:51:23,0.008s,PASSED
+"verifyElementPropertyValue(response, ""newTeam.name"", teamName)",,,,2023-01-16 12:51:23,2023-01-16 12:51:23,0.044s,PASSED
+jsonResponse = jsonSlurper.parseText(response.getResponseBodyContent()),,,,2023-01-16 12:51:23,2023-01-16 12:51:23,0.000s,PASSED
+"helper.GlobalVariableUpdater.updatePermanentlyForCurrent(""teamId"", _id)",,,,2023-01-16 12:51:23,2023-01-16 12:51:23,0.010s,PASSED
+"helper.GlobalVariableUpdater.updatePermanentlyForCurrent(""boardId"", boards[0])",,,,2023-01-16 12:51:23,2023-01-16 12:51:23,0.010s,PASSED
+,,,,,,,
+Test Cases/lists/Create List,,,,2023-01-16 12:51:23,2023-01-16 12:51:24,0.789s,PASSED
+"response = sendRequest(findTestObject(""lists/Create List""))",,,,2023-01-16 12:51:23,2023-01-16 12:51:24,0.542s,PASSED
+"verifyResponseStatusCode(response, 200)",,,,2023-01-16 12:51:24,2023-01-16 12:51:24,0.014s,PASSED
+"verifyElementPropertyValue(response, ""message"", ""Creating list is success"")",,,,2023-01-16 12:51:24,2023-01-16 12:51:24,0.042s,PASSED
+,,,,,,,
+Test Cases/boards/Get Board,,,,2023-01-16 12:51:24,2023-01-16 12:51:24,0.546s,FAILED
+jsonSlurper = new groovy.json.JsonSlurper(),,,,2023-01-16 12:51:24,2023-01-16 12:51:24,0.002s,PASSED
+"response = sendRequest(findTestObject(""boards/Get Board""))",,,,2023-01-16 12:51:24,2023-01-16 12:51:24,0.299s,PASSED
+"verifyResponseStatusCode(response, 200)",,,,2023-01-16 12:51:24,2023-01-16 12:51:24,0.031s,FAILED
+,,,,,,,
+Test Cases/cards/Create Card,,,,2023-01-16 12:51:24,2023-01-16 12:51:25,0.880s,PASSED
+jsonSlurper = new groovy.json.JsonSlurper(),,,,2023-01-16 12:51:25,2023-01-16 12:51:25,0.002s,PASSED
+"response = sendRequest(findTestObject(""cards/Create Card""))",,,,2023-01-16 12:51:25,2023-01-16 12:51:25,0.602s,PASSED
+"verifyResponseStatusCode(response, 200)",,,,2023-01-16 12:51:25,2023-01-16 12:51:25,0.005s,PASSED
+"verifyElementPropertyValue(response, ""data.name"", cardName)",,,,2023-01-16 12:51:25,2023-01-16 12:51:25,0.040s,PASSED
+jsonResponse = jsonSlurper.parseText(response.getResponseBodyContent()),,,,2023-01-16 12:51:25,2023-01-16 12:51:25,0.001s,PASSED
+"helper.GlobalVariableUpdater.updatePermanentlyForCurrent(""cardId"", _id)",,,,2023-01-16 12:51:25,2023-01-16 12:51:25,0.011s,PASSED
+,,,,,,,
+Test Cases/cards/Create Attachment,,,,2023-01-16 12:51:25,2023-01-16 12:51:26,0.764s,FAILED
+jsonSlurper = new groovy.json.JsonSlurper(),,,,2023-01-16 12:51:26,2023-01-16 12:51:26,0.003s,PASSED
+"response = sendRequest(findTestObject(""cards/Create Attachment""))",,,,2023-01-16 12:51:26,2023-01-16 12:51:26,0.557s,PASSED
+"verifyResponseStatusCode(response, 200)",,,,2023-01-16 12:51:26,2023-01-16 12:51:26,0.016s,FAILED
+,,,,,,,
+Test Cases/companies/Delete Company,,,,2023-01-16 12:51:26,2023-01-16 12:51:30,3.694s,PASSED
+"response = sendRequest(findTestObject(""companies/Delete Company""))",,,,2023-01-16 12:51:26,2023-01-16 12:51:30,3.430s,PASSED
+"verifyResponseStatusCode(response, 200)",,,,2023-01-16 12:51:30,2023-01-16 12:51:30,0.005s,PASSED

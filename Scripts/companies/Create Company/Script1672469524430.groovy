@@ -28,4 +28,5 @@ WS.verifyElementPropertyValue(response, 'message', 'Successfully create company 
 
 def jsonResponse = jsonSlurper.parseText(response.getResponseBodyContent())
 
-GlobalVariable.companyId = jsonResponse.newCompany._id
+CustomKeywords.'helper.GlobalVariableUpdater.updatePermanentlyForCurrent'('companyId', jsonResponse.newCompany._id)
+

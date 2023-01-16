@@ -1,37 +1,72 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <GlobalVariableEntities>
-   <description></description>
+   <description/>
    <name>default</name>
-   <tag></tag>
+   <tag/>
    <defaultProfile>true</defaultProfile>
    <GlobalVariableEntity>
-      <description></description>
+      <description/>
       <initValue>'https://stagingapi.cicle.app/api/v1'</initValue>
       <name>baseUrl</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
-      <description></description>
+      <description/>
       <initValue>'jwt eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7Il9pZCI6IjYzNDdiOTBlNjk5YmMwNDg3MWE4NTJlZSIsImdvb2dsZUlkIjoiMTA4MjgwMDUwNDMxNTgzMjQzNDE2IiwiZW1haWwiOiJhcmJpbWluYW5kYTEwQGdtYWlsLmNvbSIsImZ1bGxOYW1lIjoiTXVoYW1tYWQgQXJiaSBNaW5hbmRhIiwicGhvdG9VcmwiOiJodHRwczovL3N0b3JhZ2UuZ29vZ2xlYXBpcy5jb20vc3RhZ2luZy1jaWNsZS1hcHAvNjM0N2I5MGU2OTliYzA0ODcxYTg1MmVlLzI2NmFlYjQ1YmNhOTNkNjgwYWYwNzQwYzkyOTAwMzc3L3Rlc3QxLndlYnAiLCJiaW8iOiJ0ZXN0Iiwic3RhdHVzIjoiTXVoYW1tYWQgQXJiaSBNaW5hbmRhX0lRQTE2IiwiZGVmYXVsdENvbXBhbnkiOnsiX2lkIjoiNjNhZDQ3YTI1MzE0YzFiYzdhNGFmZjJlIn0sImNyZWF0ZWRBdCI6IjIwMjItMTAtMTNUMDc6MDY6NTQuMjA4WiIsInVwZGF0ZWRBdCI6IjIwMjItMTItMjlUMDc6NTQ6MTAuNTExWiIsIl9fdiI6MH0sImlhdCI6MTY3MjMwMDY0MiwiZXhwIjoxNjc0ODkyNjQyfQ.gjsSuuqhXg0T2-J4DhKQZHf1jRJjn2i8IWy4fp1z9CY'</initValue>
       <name>token</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
-      <description></description>
-      <initValue>'63afdb3567062a9332d3e8cb'</initValue>
+      <description/>
+      <initValue>'63c4e67dc8754432677f4eb6'</initValue>
       <name>companyId</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
-      <description></description>
-      <initValue>'Automation Company'</initValue>
+      <description/>
+      <initValue>'Automation Company Test'</initValue>
       <name>companyName</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
-      <description></description>
-      <initValue>''</initValue>
+      <description/>
+      <initValue>'63c4e68edf4e18f15dcf5490'</initValue>
       <name>teamId</name>
    </GlobalVariableEntity>
    <GlobalVariableEntity>
-      <description></description>
+      <description/>
       <initValue>'Automation Team'</initValue>
       <name>teamName</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description/>
+      <initValue>'Automation Team Edit'</initValue>
+      <name>teamNameEdit</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description/>
+      <initValue>'63c4e6994ad366ca5b76b5ec'</initValue>
+      <name>listId</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description/>
+      <initValue>'63c4e73a4ad366ca5b76b626'</initValue>
+      <name>cardId</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description/>
+      <initValue>'63c4e74edf4e18f15dcf54f5'</initValue>
+      <name>attachmentId</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description/>
+      <initValue>'Automation List'</initValue>
+      <name>listName</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description/>
+      <initValue>'Automation Card'</initValue>
+      <name>cardName</name>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description/>
+      <initValue>'63c4e68edf4e18f15dcf5494'</initValue>
+      <name>boardId</name>
    </GlobalVariableEntity>
 </GlobalVariableEntities>

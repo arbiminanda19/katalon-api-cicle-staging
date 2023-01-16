@@ -1,0 +1,24 @@
+Suite/Test/Step Name,Browser,Description,Tag,Start time,End time,Duration,Status
+TS_Teams,,,,2023-01-11 21:10:25,2023-01-11 21:10:34,8.567s,PASSED
+,,,,,,,
+Test Cases/companies/Create Company,,,,2023-01-11 21:10:26,2023-01-11 21:10:32,6.120s,PASSED
+jsonSlurper = new groovy.json.JsonSlurper(),,,,2023-01-11 21:10:26,2023-01-11 21:10:26,0.009s,PASSED
+"response = sendRequest(findTestObject(""companies/Create Company""))",,,,2023-01-11 21:10:26,2023-01-11 21:10:32,5.484s,PASSED
+"verifyResponseStatusCode(response, 200)",,,,2023-01-11 21:10:32,2023-01-11 21:10:32,0.065s,PASSED
+"verifyElementPropertyValue(response, ""message"", ""Successfully create company user"")",,,,2023-01-11 21:10:32,2023-01-11 21:10:32,0.115s,PASSED
+jsonResponse = jsonSlurper.parseText(response.getResponseBodyContent()),,,,2023-01-11 21:10:32,2023-01-11 21:10:32,0.015s,PASSED
+companyId = _id,,,,2023-01-11 21:10:32,2023-01-11 21:10:32,0.000s,PASSED
+,,,,,,,
+Test Cases/teams/Create Team,,,,2023-01-11 21:10:32,2023-01-11 21:10:33,1.090s,PASSED
+"response = sendRequest(findTestObject(""teams/Create Team""))",,,,2023-01-11 21:10:32,2023-01-11 21:10:33,0.771s,PASSED
+"verifyResponseStatusCode(response, 200)",,,,2023-01-11 21:10:33,2023-01-11 21:10:33,0.009s,PASSED
+"verifyElementPropertyValue(response, ""newTeam.name"", teamName)",,,,2023-01-11 21:10:33,2023-01-11 21:10:33,0.044s,PASSED
+jsonSlurper = new groovy.json.JsonSlurper(),,,,2023-01-11 21:10:33,2023-01-11 21:10:33,0.000s,PASSED
+jsonResponse = jsonSlurper.parseText(response.getResponseBodyContent()),,,,2023-01-11 21:10:33,2023-01-11 21:10:33,0.001s,PASSED
+teamId = _id,,,,2023-01-11 21:10:33,2023-01-11 21:10:33,0.002s,PASSED
+println(teamId),,,,2023-01-11 21:10:33,2023-01-11 21:10:33,0.005s,PASSED
+,,,,,,,
+Test Cases/teams/Update Team,,,,2023-01-11 21:10:33,2023-01-11 21:10:34,0.845s,PASSED
+"response = sendRequest(findTestObject(""teams/Update Team""))",,,,2023-01-11 21:10:33,2023-01-11 21:10:34,0.598s,PASSED
+"verifyResponseStatusCode(response, 200)",,,,2023-01-11 21:10:34,2023-01-11 21:10:34,0.006s,PASSED
+"verifyElementPropertyValue(response, ""currentTeam.name"", teamNameEdit)",,,,2023-01-11 21:10:34,2023-01-11 21:10:34,0.034s,PASSED

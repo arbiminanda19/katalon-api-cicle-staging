@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="TS_Teams" time="19.446" tests="5" failures="0" errors="0">
+   <testsuite name="TS_Teams" tests="5" failures="0" errors="0" time="19.446" skipped="0" timestamp="2023-01-11 21:54:10" hostname="flp-9-muhammadminanda - localhost" id="Test Suites/TS_Teams">
+      <properties>
+         <property name="deviceName" value=""/>
+         <property name="devicePlatform" value=""/>
+         <property name="logFolder" value="/Users/flp-9-muhammadminanda/Katalon Studio/katalon-api-cicle-staging/Reports/20230111_215305/TS_Teams/20230111_215308"/>
+         <property name="logFiles" value="/Users/flp-9-muhammadminanda/Katalon Studio/katalon-api-cicle-staging/Reports/20230111_215305/TS_Teams/20230111_215308/execution0.log"/>
+         <property name="attachments" value=""/>
+         <property name="hostName" value="flp-9-muhammadminanda - localhost"/>
+         <property name="hostAddress" value="127.0.0.1"/>
+         <property name="os" value="Mac OS X 64bit"/>
+         <property name="katalonVersion" value="8.5.2.208"/>
+      </properties>
+      <testcase name="Test Cases/companies/Create Company" time="9.473" classname="Test Cases/companies/Create Company" status="PASSED">
+         <system-out><![CDATA[2023-01-11 21:54:11 - [TEST_CASE][PASSED] - Test Cases/companies/Create Company: Test Cases/companies/Create Company
+
+2023-01-11 21:54:11 - [TEST_STEP][PASSED] - jsonSlurper = new groovy.json.JsonSlurper(): null
+
+2023-01-11 21:54:11 - [TEST_STEP][PASSED] - response = sendRequest(findTestObject("companies/Create Company")): Send request successfully
+
+2023-01-11 21:54:20 - [MESSAGE][INFO] - HAR: /Users/flp-9-muhammadminanda/Katalon Studio/katalon-api-cicle-staging/Reports/20230111_215305/TS_Teams/20230111_215308/requests/main/0.har
+
+2023-01-11 21:54:20 - [MESSAGE][PASSED] - Send request successfully
+
+2023-01-11 21:54:20 - [TEST_STEP][PASSED] - verifyResponseStatusCode(response, 200): Verify response status code successfully
+
+2023-01-11 21:54:20 - [MESSAGE][PASSED] - Verify response status code successfully
+
+2023-01-11 21:54:20 - [TEST_STEP][PASSED] - verifyElementPropertyValue(response, "message", "Successfully create company user"): Verify element property value successfully
+
+2023-01-11 21:54:20 - [MESSAGE][PASSED] - Verify element property value successfully
+
+2023-01-11 21:54:20 - [TEST_STEP][PASSED] - jsonResponse = jsonSlurper.parseText(response.getResponseBodyContent()): null
+
+2023-01-11 21:54:20 - [TEST_STEP][PASSED] - helper.GlobalVariableUpdater.updatePermanentlyForCurrent("companyId", _id): helper.GlobalVariableUpdater.updatePermanentlyForCurrent is PASSED
+
+2023-01-11 21:54:20 - [MESSAGE][PASSED] - helper.GlobalVariableUpdater.updatePermanentlyForCurrent is PASSED]]></system-out>
+         <system-err><![CDATA[]]></system-err>
+      </testcase>
+      <testcase name="Test Cases/teams/Create Team" time="1.388" classname="Test Cases/teams/Create Team" status="PASSED">
+         <system-out><![CDATA[2023-01-11 21:54:20 - [TEST_CASE][PASSED] - Test Cases/teams/Create Team: Test Cases/teams/Create Team
+
+2023-01-11 21:54:21 - [TEST_STEP][PASSED] - response = sendRequest(findTestObject("teams/Create Team")): Send request successfully
+
+2023-01-11 21:54:22 - [MESSAGE][INFO] - HAR: /Users/flp-9-muhammadminanda/Katalon Studio/katalon-api-cicle-staging/Reports/20230111_215305/TS_Teams/20230111_215308/requests/main/1.har
+
+2023-01-11 21:54:22 - [MESSAGE][PASSED] - Send request successfully
+
+2023-01-11 21:54:22 - [TEST_STEP][PASSED] - verifyResponseStatusCode(response, 200): Verify response status code successfully
+
+2023-01-11 21:54:22 - [MESSAGE][PASSED] - Verify response status code successfully
+
+2023-01-11 21:54:22 - [TEST_STEP][PASSED] - verifyElementPropertyValue(response, "newTeam.name", teamName): Verify element property value successfully
+
+2023-01-11 21:54:22 - [MESSAGE][PASSED] - Verify element property value successfully
+
+2023-01-11 21:54:22 - [TEST_STEP][PASSED] - jsonSlurper = new groovy.json.JsonSlurper(): null
+
+2023-01-11 21:54:22 - [TEST_STEP][PASSED] - jsonResponse = jsonSlurper.parseText(response.getResponseBodyContent()): null
+
+2023-01-11 21:54:22 - [TEST_STEP][PASSED] - helper.GlobalVariableUpdater.updatePermanentlyForCurrent("teamId", _id): helper.GlobalVariableUpdater.updatePermanentlyForCurrent is PASSED
+
+2023-01-11 21:54:22 - [MESSAGE][PASSED] - helper.GlobalVariableUpdater.updatePermanentlyForCurrent is PASSED]]></system-out>
+         <system-err><![CDATA[]]></system-err>
+      </testcase>
+      <testcase name="Test Cases/teams/Update Team" time="1.432" classname="Test Cases/teams/Update Team" status="PASSED">
+         <system-out><![CDATA[2023-01-11 21:54:22 - [TEST_CASE][PASSED] - Test Cases/teams/Update Team: Test Cases/teams/Update Team
+
+2023-01-11 21:54:22 - [TEST_STEP][PASSED] - response = sendRequest(findTestObject("teams/Update Team")): Send request successfully
+
+2023-01-11 21:54:23 - [MESSAGE][INFO] - HAR: /Users/flp-9-muhammadminanda/Katalon Studio/katalon-api-cicle-staging/Reports/20230111_215305/TS_Teams/20230111_215308/requests/main/2.har
+
+2023-01-11 21:54:23 - [MESSAGE][PASSED] - Send request successfully
+
+2023-01-11 21:54:23 - [TEST_STEP][PASSED] - verifyResponseStatusCode(response, 200): Verify response status code successfully
+
+2023-01-11 21:54:23 - [MESSAGE][PASSED] - Verify response status code successfully
+
+2023-01-11 21:54:23 - [TEST_STEP][PASSED] - verifyElementPropertyValue(response, "currentTeam.name", teamNameEdit): Verify element property value successfully
+
+2023-01-11 21:54:23 - [MESSAGE][PASSED] - Verify element property value successfully]]></system-out>
+         <system-err><![CDATA[]]></system-err>
+      </testcase>
+      <testcase name="Test Cases/teams/Archive Team" time="1.241" classname="Test Cases/teams/Archive Team" status="PASSED">
+         <system-out><![CDATA[2023-01-11 21:54:23 - [TEST_CASE][PASSED] - Test Cases/teams/Archive Team: Test Cases/teams/Archive Team
+
+2023-01-11 21:54:23 - [TEST_STEP][PASSED] - response = sendRequest(findTestObject("teams/Archive Team")): Send request successfully
+
+2023-01-11 21:54:24 - [MESSAGE][INFO] - HAR: /Users/flp-9-muhammadminanda/Katalon Studio/katalon-api-cicle-staging/Reports/20230111_215305/TS_Teams/20230111_215308/requests/main/3.har
+
+2023-01-11 21:54:24 - [MESSAGE][PASSED] - Send request successfully
+
+2023-01-11 21:54:24 - [TEST_STEP][PASSED] - verifyResponseStatusCode(response, 200): Verify response status code successfully
+
+2023-01-11 21:54:24 - [MESSAGE][PASSED] - Verify response status code successfully
+
+2023-01-11 21:54:24 - [TEST_STEP][PASSED] - verifyElementPropertyValue(response, "currentTeam.archived.status", true): Verify element property value successfully
+
+2023-01-11 21:54:24 - [MESSAGE][PASSED] - Verify element property value successfully]]></system-out>
+         <system-err><![CDATA[]]></system-err>
+      </testcase>
+      <testcase name="Test Cases/companies/Delete Company" time="5.419" classname="Test Cases/companies/Delete Company" status="PASSED">
+         <system-out><![CDATA[2023-01-11 21:54:24 - [TEST_CASE][PASSED] - Test Cases/companies/Delete Company: Test Cases/companies/Delete Company
+
+2023-01-11 21:54:25 - [TEST_STEP][PASSED] - response = sendRequest(findTestObject("companies/Delete Company")): Send request successfully
+
+2023-01-11 21:54:30 - [MESSAGE][INFO] - HAR: /Users/flp-9-muhammadminanda/Katalon Studio/katalon-api-cicle-staging/Reports/20230111_215305/TS_Teams/20230111_215308/requests/main/4.har
+
+2023-01-11 21:54:30 - [MESSAGE][PASSED] - Send request successfully
+
+2023-01-11 21:54:30 - [TEST_STEP][PASSED] - verifyResponseStatusCode(response, 200): Verify response status code successfully
+
+2023-01-11 21:54:30 - [MESSAGE][PASSED] - Verify response status code successfully]]></system-out>
+         <system-err><![CDATA[]]></system-err>
+      </testcase>
+      <system-out><![CDATA[2023-01-11 21:54:10 - [TEST_SUITE][PASSED] - TS_Teams: Test Cases/companies/Delete Company]]></system-out>
+      <system-err><![CDATA[]]></system-err>
+   </testsuite>
+</testsuites>

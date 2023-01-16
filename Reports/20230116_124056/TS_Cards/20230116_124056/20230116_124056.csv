@@ -1,0 +1,31 @@
+Suite/Test/Step Name,Browser,Description,Tag,Start time,End time,Duration,Status
+TS_Cards,,,,2023-01-16 12:41:09,2023-01-16 12:41:21,12.304s,ERROR
+,,,,,,,
+Test Cases/companies/Create Company,,,,2023-01-16 12:41:09,2023-01-16 12:41:19,9.790s,PASSED
+jsonSlurper = new groovy.json.JsonSlurper(),,,,2023-01-16 12:41:10,2023-01-16 12:41:10,0.011s,PASSED
+"response = sendRequest(findTestObject(""companies/Create Company""))",,,,2023-01-16 12:41:10,2023-01-16 12:41:18,8.709s,PASSED
+"verifyResponseStatusCode(response, 200)",,,,2023-01-16 12:41:18,2023-01-16 12:41:18,0.068s,PASSED
+"verifyElementPropertyValue(response, ""message"", ""Successfully create company user"")",,,,2023-01-16 12:41:18,2023-01-16 12:41:18,0.131s,PASSED
+jsonResponse = jsonSlurper.parseText(response.getResponseBodyContent()),,,,2023-01-16 12:41:18,2023-01-16 12:41:19,0.021s,PASSED
+"helper.GlobalVariableUpdater.updatePermanentlyForCurrent(""companyId"", _id)",,,,2023-01-16 12:41:19,2023-01-16 12:41:19,0.386s,PASSED
+,,,,,,,
+Test Cases/teams/Create Team,,,,2023-01-16 12:41:19,2023-01-16 12:41:20,0.668s,FAILED
+"response = sendRequest(findTestObject(""teams/Create Team""))",,,,2023-01-16 12:41:19,2023-01-16 12:41:20,0.334s,PASSED
+"verifyResponseStatusCode(response, 200)",,,,2023-01-16 12:41:20,2023-01-16 12:41:20,0.033s,FAILED
+,,,,,,,
+Test Cases/lists/Create List,,,,2023-01-16 12:41:20,2023-01-16 12:41:20,0.609s,PASSED
+"response = sendRequest(findTestObject(""lists/Create List""))",,,,2023-01-16 12:41:20,2023-01-16 12:41:20,0.353s,PASSED
+"verifyResponseStatusCode(response, 200)",,,,2023-01-16 12:41:20,2023-01-16 12:41:20,0.013s,PASSED
+"verifyElementPropertyValue(response, ""message"", ""Creating list is success"")",,,,2023-01-16 12:41:20,2023-01-16 12:41:20,0.036s,PASSED
+,,,,,,,
+Test Cases/boards/Get Board,,,,2023-01-16 12:41:20,2023-01-16 12:41:20,0.253s,ERROR
+jsonSlurper = new groovy.json.JsonSlurper(),,,,2023-01-16 12:41:20,2023-01-16 12:41:20,0.007s,PASSED
+jsonResponse = jsonSlurper.parseText(response.getResponseBodyContent()),,,,2023-01-16 12:41:20,2023-01-16 12:41:20,0.014s,ERROR
+,,,,,,,
+Test Cases/cards/Create Card,,,,2023-01-16 12:41:21,2023-01-16 12:41:21,0.240s,ERROR
+jsonSlurper = new groovy.json.JsonSlurper(),,,,2023-01-16 12:41:21,2023-01-16 12:41:21,0.000s,PASSED
+jsonResponse = jsonSlurper.parseText(response.getResponseBodyContent()),,,,2023-01-16 12:41:21,2023-01-16 12:41:21,0.005s,ERROR
+,,,,,,,
+Test Cases/cards/Create Attachment,,,,2023-01-16 12:41:21,2023-01-16 12:41:21,0.206s,ERROR
+jsonSlurper = new groovy.json.JsonSlurper(),,,,2023-01-16 12:41:21,2023-01-16 12:41:21,0.002s,PASSED
+jsonResponse = jsonSlurper.parseText(response.getResponseBodyContent()),,,,2023-01-16 12:41:21,2023-01-16 12:41:21,0.005s,ERROR

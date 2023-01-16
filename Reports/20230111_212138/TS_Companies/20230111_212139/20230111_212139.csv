@@ -1,0 +1,29 @@
+Suite/Test/Step Name,Browser,Description,Tag,Start time,End time,Duration,Status
+TS_Companies,,,,2023-01-11 21:22:01,2023-01-11 21:23:30,1m - 28.570s,PASSED
+,,,,,,,
+Test Cases/companies/Create Company,,,,2023-01-11 21:22:02,2023-01-11 21:22:10,8.706s,PASSED
+jsonSlurper = new groovy.json.JsonSlurper(),,,,2023-01-11 21:22:02,2023-01-11 21:22:02,0.011s,PASSED
+"response = sendRequest(findTestObject(""companies/Create Company""))",,,,2023-01-11 21:22:02,2023-01-11 21:22:10,7.998s,PASSED
+"verifyResponseStatusCode(response, 200)",,,,2023-01-11 21:22:10,2023-01-11 21:22:10,0.055s,PASSED
+"verifyElementPropertyValue(response, ""message"", ""Successfully create company user"")",,,,2023-01-11 21:22:10,2023-01-11 21:22:10,0.109s,PASSED
+jsonResponse = jsonSlurper.parseText(response.getResponseBodyContent()),,,,2023-01-11 21:22:10,2023-01-11 21:22:10,0.010s,PASSED
+companyId = _id,,,,2023-01-11 21:22:10,2023-01-11 21:22:10,0.001s,PASSED
+,,,,,,,
+Test Cases/companies/Get All Companies,,,,2023-01-11 21:22:10,2023-01-11 21:22:21,10.300s,PASSED
+"response = sendRequest(findTestObject(""companies/Get All Companies""))",,,,2023-01-11 21:22:11,2023-01-11 21:22:21,9.924s,PASSED
+"verifyResponseStatusCode(response, 200)",,,,2023-01-11 21:22:21,2023-01-11 21:22:21,0.009s,PASSED
+jsonSlurper = new groovy.json.JsonSlurper(),,,,2023-01-11 21:22:21,2023-01-11 21:22:21,0.001s,PASSED
+jsonResponse = jsonSlurper.parseText(response.getResponseBodyContent()),,,,2023-01-11 21:22:21,2023-01-11 21:22:21,0.016s,PASSED
+foundCompany = false,,,,2023-01-11 21:22:21,2023-01-11 21:22:21,0.001s,PASSED
+i = 0,,,,2023-01-11 21:22:21,2023-01-11 21:22:21,0.000s,PASSED
+while (!(foundCompany)),,,,2023-01-11 21:22:21,2023-01-11 21:22:21,0.036s,PASSED
+,,,,,,,
+Test Cases/companies/Update Company,,,,2023-01-11 21:22:21,2023-01-11 21:22:54,33.328s,PASSED
+"companyName = companyName + "" Edited""",,,,2023-01-11 21:22:21,2023-01-11 21:22:21,0.003s,PASSED
+"response = sendRequest(findTestObject(""companies/Update Company""))",,,,2023-01-11 21:22:21,2023-01-11 21:22:54,32.942s,PASSED
+"verifyResponseStatusCode(response, 200)",,,,2023-01-11 21:22:54,2023-01-11 21:22:54,0.011s,PASSED
+"verifyElementPropertyValue(response, ""company.name"", companyName)",,,,2023-01-11 21:22:54,2023-01-11 21:22:54,0.077s,PASSED
+,,,,,,,
+Test Cases/companies/Delete Company,,,,2023-01-11 21:22:54,2023-01-11 21:23:30,35.679s,PASSED
+"response = sendRequest(findTestObject(""companies/Delete Company""))",,,,2023-01-11 21:22:54,2023-01-11 21:23:30,35.353s,PASSED
+"verifyResponseStatusCode(response, 200)",,,,2023-01-11 21:23:30,2023-01-11 21:23:30,0.007s,PASSED

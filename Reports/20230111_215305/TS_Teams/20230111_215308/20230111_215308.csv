@@ -1,0 +1,32 @@
+Suite/Test/Step Name,Browser,Description,Tag,Start time,End time,Duration,Status
+TS_Teams,,,,2023-01-11 21:54:10,2023-01-11 21:54:30,19.446s,PASSED
+,,,,,,,
+Test Cases/companies/Create Company,,,,2023-01-11 21:54:11,2023-01-11 21:54:20,9.473s,PASSED
+jsonSlurper = new groovy.json.JsonSlurper(),,,,2023-01-11 21:54:11,2023-01-11 21:54:11,0.009s,PASSED
+"response = sendRequest(findTestObject(""companies/Create Company""))",,,,2023-01-11 21:54:11,2023-01-11 21:54:20,8.603s,PASSED
+"verifyResponseStatusCode(response, 200)",,,,2023-01-11 21:54:20,2023-01-11 21:54:20,0.053s,PASSED
+"verifyElementPropertyValue(response, ""message"", ""Successfully create company user"")",,,,2023-01-11 21:54:20,2023-01-11 21:54:20,0.091s,PASSED
+jsonResponse = jsonSlurper.parseText(response.getResponseBodyContent()),,,,2023-01-11 21:54:20,2023-01-11 21:54:20,0.016s,PASSED
+"helper.GlobalVariableUpdater.updatePermanentlyForCurrent(""companyId"", _id)",,,,2023-01-11 21:54:20,2023-01-11 21:54:20,0.273s,PASSED
+,,,,,,,
+Test Cases/teams/Create Team,,,,2023-01-11 21:54:20,2023-01-11 21:54:22,1.388s,PASSED
+"response = sendRequest(findTestObject(""teams/Create Team""))",,,,2023-01-11 21:54:21,2023-01-11 21:54:22,1.022s,PASSED
+"verifyResponseStatusCode(response, 200)",,,,2023-01-11 21:54:22,2023-01-11 21:54:22,0.011s,PASSED
+"verifyElementPropertyValue(response, ""newTeam.name"", teamName)",,,,2023-01-11 21:54:22,2023-01-11 21:54:22,0.053s,PASSED
+jsonSlurper = new groovy.json.JsonSlurper(),,,,2023-01-11 21:54:22,2023-01-11 21:54:22,0.000s,PASSED
+jsonResponse = jsonSlurper.parseText(response.getResponseBodyContent()),,,,2023-01-11 21:54:22,2023-01-11 21:54:22,0.001s,PASSED
+"helper.GlobalVariableUpdater.updatePermanentlyForCurrent(""teamId"", _id)",,,,2023-01-11 21:54:22,2023-01-11 21:54:22,0.009s,PASSED
+,,,,,,,
+Test Cases/teams/Update Team,,,,2023-01-11 21:54:22,2023-01-11 21:54:23,1.432s,PASSED
+"response = sendRequest(findTestObject(""teams/Update Team""))",,,,2023-01-11 21:54:22,2023-01-11 21:54:23,1.136s,PASSED
+"verifyResponseStatusCode(response, 200)",,,,2023-01-11 21:54:23,2023-01-11 21:54:23,0.013s,PASSED
+"verifyElementPropertyValue(response, ""currentTeam.name"", teamNameEdit)",,,,2023-01-11 21:54:23,2023-01-11 21:54:23,0.084s,PASSED
+,,,,,,,
+Test Cases/teams/Archive Team,,,,2023-01-11 21:54:23,2023-01-11 21:54:24,1.241s,PASSED
+"response = sendRequest(findTestObject(""teams/Archive Team""))",,,,2023-01-11 21:54:23,2023-01-11 21:54:24,0.978s,PASSED
+"verifyResponseStatusCode(response, 200)",,,,2023-01-11 21:54:24,2023-01-11 21:54:24,0.005s,PASSED
+"verifyElementPropertyValue(response, ""currentTeam.archived.status"", true)",,,,2023-01-11 21:54:24,2023-01-11 21:54:24,0.038s,PASSED
+,,,,,,,
+Test Cases/companies/Delete Company,,,,2023-01-11 21:54:24,2023-01-11 21:54:30,5.419s,PASSED
+"response = sendRequest(findTestObject(""companies/Delete Company""))",,,,2023-01-11 21:54:25,2023-01-11 21:54:30,5.237s,PASSED
+"verifyResponseStatusCode(response, 200)",,,,2023-01-11 21:54:30,2023-01-11 21:54:30,0.004s,PASSED
